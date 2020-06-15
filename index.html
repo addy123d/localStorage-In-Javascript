@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  -->
+    <meta charset="UTF-8">
+    <meta name="description" content="EDITABLE PAGE USING LOCALSTORAGE">
+    <meta name="keywords" content="HTML | CSS | VANILLA JS">
+    <meta name="author" content="Aditya Chaudhary">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Editable Page using LOCALSTORAGE</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    color: #ffffff;
+    font-family: 'Oxanium',cursive;
+}
+
+#page{
+    background: #526bf5;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2{
+    margin-top: 2%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.content{
+    text-align: center;
+    margin: 1%;
+    margin-top: 4%;
+}
+
+.content p{
+    font-size: 2rem;
+    font-family: 'Poppins',cursive;
+}
+form{
+    margin: 5%;
+}
+input,button,textarea{
+    margin: 1%;
+    padding: .7em 1em .7em 1em;
+}
+
+input{
+    font-family: 'Poppins',cursive;
+    color: #000000;
+}
+
+button{
+    text-transform: uppercase;
+    font-family: 'Poppins',cursive;
+    font-weight: bold;
+    background: transparent;
+    outline: none;
+    color: #ffffff;
+    border : 1px solid #000000;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: all .3s;
+    background: #ffffff;
+    color: #000000;
+    text-shadow:unset;
+}
+
+</style>
+<body>
+    <section>
+        <div id="page">
+
+            <!-- TITLE -->
+            <div class="title">
+                <h2 id="editheader">Header</h2>
+            </div>
+            
+            <!-- CONTENT -->
+            <div class="content">
+                <p id="editcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore aliquid facilis nam. Voluptatibus nam provident modi unde consequuntur sapiente, accusantium at placeat consequatur necessitatibus iure sequi corrupti sit! Veritatis?</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="Theform">
+            <div class="titleinput">
+                <input type="text" name="title" placeholder="Title">
+            </div>
+
+            <div class="contentinput">
+                <textarea placeholder="Content" name="content"></textarea>
+            </div>
+
+            <div class="bgcolorinput">
+                <input type="color" name="color" placeholder="Background Colour">
+                <label for="bgcolor">Background Colour</label>
+            </div>
+
+            <div class="submitbtn">
+                <button id="button"> Change </button>
+            </div>
+            </form>
+    </section>
+</body>
+<script src="main.js"></script>
+</html>
